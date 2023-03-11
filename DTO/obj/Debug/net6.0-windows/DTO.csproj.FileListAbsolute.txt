@@ -1,0 +1,17 @@
+E:\Documents\OneDrive - student.tdtu.edu.vn\Desktop\CNPM_TH\coffee_manager_winform\DTO\bin\Debug\net6.0-windows\DTO.exe
+E:\Documents\OneDrive - student.tdtu.edu.vn\Desktop\CNPM_TH\coffee_manager_winform\DTO\bin\Debug\net6.0-windows\DTO.deps.json
+E:\Documents\OneDrive - student.tdtu.edu.vn\Desktop\CNPM_TH\coffee_manager_winform\DTO\bin\Debug\net6.0-windows\DTO.runtimeconfig.json
+E:\Documents\OneDrive - student.tdtu.edu.vn\Desktop\CNPM_TH\coffee_manager_winform\DTO\bin\Debug\net6.0-windows\DTO.dll
+E:\Documents\OneDrive - student.tdtu.edu.vn\Desktop\CNPM_TH\coffee_manager_winform\DTO\bin\Debug\net6.0-windows\DTO.pdb
+E:\Documents\OneDrive - student.tdtu.edu.vn\Desktop\CNPM_TH\coffee_manager_winform\DTO\obj\Debug\net6.0-windows\DTO.csproj.AssemblyReference.cache
+E:\Documents\OneDrive - student.tdtu.edu.vn\Desktop\CNPM_TH\coffee_manager_winform\DTO\obj\Debug\net6.0-windows\DTO.Form1.resources
+E:\Documents\OneDrive - student.tdtu.edu.vn\Desktop\CNPM_TH\coffee_manager_winform\DTO\obj\Debug\net6.0-windows\DTO.csproj.GenerateResource.cache
+E:\Documents\OneDrive - student.tdtu.edu.vn\Desktop\CNPM_TH\coffee_manager_winform\DTO\obj\Debug\net6.0-windows\DTO.GeneratedMSBuildEditorConfig.editorconfig
+E:\Documents\OneDrive - student.tdtu.edu.vn\Desktop\CNPM_TH\coffee_manager_winform\DTO\obj\Debug\net6.0-windows\DTO.AssemblyInfoInputs.cache
+E:\Documents\OneDrive - student.tdtu.edu.vn\Desktop\CNPM_TH\coffee_manager_winform\DTO\obj\Debug\net6.0-windows\DTO.AssemblyInfo.cs
+E:\Documents\OneDrive - student.tdtu.edu.vn\Desktop\CNPM_TH\coffee_manager_winform\DTO\obj\Debug\net6.0-windows\DTO.csproj.CoreCompileInputs.cache
+E:\Documents\OneDrive - student.tdtu.edu.vn\Desktop\CNPM_TH\coffee_manager_winform\DTO\obj\Debug\net6.0-windows\DTO.dll
+E:\Documents\OneDrive - student.tdtu.edu.vn\Desktop\CNPM_TH\coffee_manager_winform\DTO\obj\Debug\net6.0-windows\refint\DTO.dll
+E:\Documents\OneDrive - student.tdtu.edu.vn\Desktop\CNPM_TH\coffee_manager_winform\DTO\obj\Debug\net6.0-windows\DTO.pdb
+E:\Documents\OneDrive - student.tdtu.edu.vn\Desktop\CNPM_TH\coffee_manager_winform\DTO\obj\Debug\net6.0-windows\DTO.genruntimeconfig.cache
+E:\Documents\OneDrive - student.tdtu.edu.vn\Desktop\CNPM_TH\coffee_manager_winform\DTO\obj\Debug\net6.0-windows\ref\DTO.dll
