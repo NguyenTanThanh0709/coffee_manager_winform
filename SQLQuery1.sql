@@ -25,6 +25,7 @@ create table loaikhachhang(
 	giamgia int
 )
 
+
 create table khachhang(
 	sdt varchar(50) primary key,
 	ten_kh nvarchar(100),
@@ -163,3 +164,41 @@ SELECT  *
 FROM nhanvien
 WHERE sdt=@sdt AND matkhau=@pass
 end
+
+select * from Khachhang
+select * from loaikhachhang
+exec usp_Login_KHACHHANG @sdt = '123', @pass = '123'
+go
+
+CREATE PROCEDURE insert_khachhang
+(
+	 @p_sdt VARCHAR(50),
+     @p_ten_kh NVARCHAR(100),
+     @p_diemtl INT,
+     @p_password VARCHAR(50),
+     @p_ma_loaikh VARCHAR(100)
+)
+AS
+BEGIN
+	if exists ( SELECT * FROM khachhang WHERE sdt = @p_sdt)
+	BEGIN
+		select 'failed' stt
+	end
+	else
+	begin
+		INSERT INTO khachhang (sdt, ten_kh, diemtl, password, ma_loaikh)
+		VALUES (@p_sdt, @p_ten_kh, @p_diemtl, @p_password, @p_ma_loaikh);
+		select 'done' stt
+	end
+end
+
+go
+
+
+
+select * from khachhang
+
+
+exec insert_khachhang @p_sdt = '333', 
+@p_ten_kh = '123', @p_diemtl= 2,
+@p_password = '212', @p_ma_loaikh='1'

@@ -1,10 +1,13 @@
-﻿using System;
+﻿using BUS;
+using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -76,9 +79,9 @@ namespace QuanLyQuanCafe
 
         private void btn_register_Click(object sender, EventArgs e)
         {
-            
 
-            if (tb_sdt.Text == "" || tb_sdt.Text == "Enter  phone number")
+            bool isIntString = tb_sdt.Text.ToString().All(char.IsDigit);
+            if (tb_sdt.Text == "" || tb_sdt.Text == "Enter  phone number" || !isIntString)
             {
                 lb_err_sdt.Visible = true;
 
@@ -111,8 +114,20 @@ namespace QuanLyQuanCafe
             }
             else
             {
-                //String sdt = tb_sdt.Text.ToString();
-                //String pass = tb_password.Text.ToString();
+                String sdt = tb_sdt.Text.ToString();
+                String name = tb_sdt.Text.ToString();
+                int diemtl = 0;
+                String pass = tb_pass.Text.ToString();
+                bool check = KhachHangBUS.Instance.InsertAccountKhachHang(sdt, name, diemtl,pass);
+                if (check)
+                {
+                    MessageBox.Show("ok");
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("error");
+                }
             }
         }
 
@@ -141,6 +156,8 @@ namespace QuanLyQuanCafe
             tb_confirmpass.SelectAll();
         }
 
+        #region Method
         
+        #endregion
     }
 }

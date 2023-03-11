@@ -9,6 +9,8 @@ namespace QuanLyQuanCafe
             InitializeComponent();
         }
 
+
+        #region Events
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
@@ -91,7 +93,11 @@ namespace QuanLyQuanCafe
             this.Show();
             
         }
+        #endregion
 
-       
+        #region Method
+
+        #endregion
+
     }
 }

@@ -35,5 +35,10 @@ namespace BUS
             khachhang = DAO.KhachHangDAO.Instance.getAccountKhachHang(sdt, password);
             return khachhang;
         }
+
+        public bool InsertAccountKhachHang(string sdt, string name, int diemtl, string pass)
+        {
+            return DAO.KhachHangDAO.Instance.InsertAccountKhachHang( sdt,  name,  diemtl,  pass);
+        }
     }
 }

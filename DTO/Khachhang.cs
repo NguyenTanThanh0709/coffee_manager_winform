@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,15 @@ namespace DTO
             this.password = password;
             this.ma_loaikh = ma_loaikh;
 
+        }
+
+        public Khachhang(DataRow row)
+        {
+            this.Sdt = row["sdt"].ToString();
+            this.Ten_kh = row["ten_kh"].ToString();
+            this.Diemtl = (int)row["diemtl"];
+            this.Password = row["password"].ToString();
+            this.Ma_loaikh = row["ma_loaikh"].ToString();
         }
 
         public Khachhang()

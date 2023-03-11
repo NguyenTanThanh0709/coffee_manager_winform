@@ -26,55 +26,54 @@ namespace DAO
         }
         private DataProvider() { }
 
-        public Khachhang ecuxeProcedure_getKHACHHANG(String sdt, String pass)
+        public bool InsertAccountKhachHang(string sdt, string name, int diemtl, string pass)
         {
-            Khachhang khachhang = null;
-
-            String query = $"exec usp_Login_KHACHHANG @sdt = '{sdt}', @pass = '{pass}'";
-            SqlCommand command;
-            SqlDataAdapter adapter = new SqlDataAdapter();
-            DataTable table = new DataTable();
-            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            String loaikhachhang = "1";
+            String query = "insert_khachhang @p_sdt , @p_ten_kh , @p_diemtl , @p_password , @p_ma_loaikh";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { sdt, name, diemtl, pass, loaikhachhang });
+            if (data.Rows.Count != 1)
             {
-                connection.Open();
-                command = connection.CreateCommand();
-                command.CommandText = query;
-                adapter.SelectCommand = command;
-                table.Clear();
-                adapter.Fill(table);
-            }
-            //dataGridView1.DataSource = table;
-            
-            int result = table.Rows.Count;
-            
-
-            if (result != 1)
-
-            {
-
-                return null;
-
-             
+                return false;
             }
             else
             {
-                foreach (DataRow row in table.Rows)
+                foreach (DataRow item in data.Rows)
                 {
-                    String sdt_ = row["sdt"].ToString();
-                    string ten = row["ten_kh"].ToString();
-                    int diemtl = Int32.Parse(row["diemtl"].ToString());
-                    string password = row["password"].ToString();
-                    string ma_loaikh = row["ma_loaikh"].ToString();
-                    khachhang.Sdt = sdt;
-                    khachhang.Ten_kh = ten;
-                    khachhang.Diemtl = diemtl;
-                    khachhang.Password = password;
-                    khachhang.Ma_loaikh = ma_loaikh;
-                    break;
+                   
+                    String check = item["stt"].ToString();
+                    if (check.Equals("done"))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
                 }
-                MessageBox.Show("Success! ok");
             }
-            return khachhang;
+
+            return false;
+        }
+
+        public Khachhang ecuxeProcedure_getKHACHHANG(String sdt, String pass)
+        {
+            String query = "usp_Login_KHACHHANG @sdt , @pass";
+            List<Khachhang> KhachhangList = new List<Khachhang>();
+            DataTable data = DataProvider.Instance.ExecuteQuery(query,new object[] {sdt,pass});
+
+            if (data.Rows.Count != 1)
+            {
+                return null;
+            }
+            else
+            {
+                foreach (DataRow item in data.Rows)
+                {
+                    Khachhang kh = new Khachhang(item);
+                    KhachhangList.Add(kh);
+                }
+            }
+            return KhachhangList[0];
         }
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
@@ -173,5 +172,7 @@ namespace DAO
 
             return data;
         }
+
+        
     }
 }

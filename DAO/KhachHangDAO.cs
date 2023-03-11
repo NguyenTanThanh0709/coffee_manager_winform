@@ -36,5 +36,12 @@ namespace DAO
             khachhang = DataProvider.Instance.ecuxeProcedure_getKHACHHANG(sdt, pass);
             return khachhang;
         }
+
+        public bool InsertAccountKhachHang(string sdt, string name, int diemtl, string pass)
+        {
+            bool check = false;
+            check = DataProvider.Instance.InsertAccountKhachHang( sdt,  name,  diemtl,  pass);
+            return check;
+        }
     }
 }
