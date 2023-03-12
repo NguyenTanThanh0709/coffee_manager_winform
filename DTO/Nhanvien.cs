@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,7 +19,7 @@ namespace DTO
         private bool phanquen;
         private String matkhau;
 
-        public Nhanvien( string sdt, string ten_nv, bool gioitinh, string chucvu, DateTime ngayvaolam, string diachi, bool trangthai, bool phanquen, string matkhau)
+        public Nhanvien( string sdt, string ten_nv, bool gioitinh, string chucvu, DateTime ngayvaolam, string diachi,bool phanquen, string matkhau)
         {
             this.sdt = sdt;
             this.ten_nv = ten_nv;
@@ -26,9 +27,20 @@ namespace DTO
             this.chucvu = chucvu;
             this.ngayvaolam = ngayvaolam;
             this.diachi = diachi;
-            this.trangthai = trangthai;
             this.phanquen = phanquen;
             this.matkhau = matkhau;
+        }
+
+        public Nhanvien(DataRow row)
+        {
+            this.sdt = row["sdt"].ToString();
+            this.ten_nv = row["ten_nv"].ToString();
+            this.gioitinh = (bool)row["gioitinh"];
+            this.chucvu = row["chucvu"].ToString();
+            this.ngayvaolam = (DateTime)row["ngayvaolam"];
+            this.diachi = row["diachi"].ToString();
+            this.phanquen = (bool)row["phanquyen"];
+            this.matkhau = row["password"].ToString();
         }
 
         public Nhanvien()
@@ -44,7 +56,6 @@ namespace DTO
         public string Chucvu { get => chucvu; set => chucvu = value; }
         public DateTime Ngayvaolam { get => ngayvaolam; set => ngayvaolam = value; }
         public string Diachi { get => diachi; set => diachi = value; }
-        public bool Trangthai { get => trangthai; set => trangthai = value; }
         public bool Phanquen { get => phanquen; set => phanquen = value; }
         public string Matkhau { get => matkhau; set => matkhau = value; }
 

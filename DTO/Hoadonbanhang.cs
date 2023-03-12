@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,14 +17,27 @@ namespace DTO
         private int tongtien;
         private int diemtl;
         private int giamgia;
-        private int chiphikhac;
-        private String trangthai;
+
+        private bool trangthai;
 
         public Hoadonbanhang()
         {
         }
 
-        public Hoadonbanhang(string ma_hd_bh, string sdt_nv, string sdt_kh, string maban, DateTime ngay_hd_bh, int tongtien, int diemtl, int giamgia, int chiphikhac, string trangthai)
+        public Hoadonbanhang(DataRow row)
+        {
+            this.Ma_hd_bh = row["ma_hd_bh"].ToString();
+            this.Sdt_nv = row["sdt_nv"].ToString();
+            this.Sdt_kh = row["sdt_kh"].ToString();
+            this.Maban = row["maban"].ToString();
+            this.Ngay_hd_bh = (DateTime)row["ngay_hd_bh_check_in"];
+            this.Tongtien = (int)row["tongtien"];
+            this.Diemtl = (int)row["diemtl"];
+            this.Giamgia = (int)row["giagiam"];
+            this.Trangthai = (bool)row["trangthai"];    
+        }
+
+        public Hoadonbanhang(string ma_hd_bh, string sdt_nv, string sdt_kh, string maban, DateTime ngay_hd_bh, int tongtien, int diemtl, int giamgia, bool trangthai)
         {
             this.Ma_hd_bh = ma_hd_bh;
             this.Sdt_nv = sdt_nv;
@@ -33,7 +47,6 @@ namespace DTO
             this.Tongtien = tongtien;
             this.Diemtl = diemtl;
             this.Giamgia = giamgia;
-            this.Chiphikhac = chiphikhac;
             this.Trangthai = trangthai;
         }
 
@@ -45,7 +58,7 @@ namespace DTO
         public int Tongtien { get => tongtien; set => tongtien = value; }
         public int Diemtl { get => diemtl; set => diemtl = value; }
         public int Giamgia { get => giamgia; set => giamgia = value; }
-        public int Chiphikhac { get => chiphikhac; set => chiphikhac = value; }
-        public string Trangthai { get => trangthai; set => trangthai = value; }
+
+        public bool Trangthai { get => trangthai; set => trangthai = value; }
     }
 }

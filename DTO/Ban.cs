@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,14 @@ namespace DTO
             this.tenban = tenban;
             this.makhuvuc = makhuvuc;
             this.thuoctinh = thuoctinh;
+        }
+
+        public Ban(DataRow row)
+        {
+            this.Maban = row["maban"].ToString();
+            this.Thuoctinh = row["trangthai"].ToString();
+            this.Makhuvuc = row["makhuvuc"].ToString();
+            this.Tenban = row["tenban"].ToString();
         }
 
         public Ban() { }

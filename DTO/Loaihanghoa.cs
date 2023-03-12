@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,14 @@ namespace DTO
         private String maloaihang;
         private String tenloaihang;
             private String mota;
+
+        public Loaihanghoa(DataRow row)
+        {
+            this.maloaihang = row["ma_loaihoang"].ToString();
+            this.tenloaihang = row["tenloaihang"].ToString();
+            this.mota = row["mota"].ToString();
+
+        }
 
         public string Maloaihang { get => maloaihang; set => maloaihang = value; }
         public string Tenloaihang { get => tenloaihang; set => tenloaihang = value; }

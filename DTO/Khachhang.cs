@@ -31,7 +31,7 @@ namespace DTO
             this.Ten_kh = row["ten_kh"].ToString();
             this.Diemtl = (int)row["diemtl"];
             this.Password = row["password"].ToString();
-            this.Ma_loaikh = row["ma_loaikh"].ToString();
+            this.Ma_loaikh = row["ma_loaikh"].ToString();  
         }
 
         public Khachhang()

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,14 @@ namespace DTO
 
         public Chitietnhaphanghoa()
         {
+        }
+
+        public Chitietnhaphanghoa(DataRow row)
+        {
+            this.Ma_hd_nh = row["ma_hd_nh"].ToString();
+            this.Ma_hh = row["ma_hanghoa"].ToString();
+            this.Soluong = (int)row["soluong"];
+            this.Thanhtien = (int)row["thanhtien"];
         }
 
         public Chitietnhaphanghoa(string ma_hd_nh, string ma_hh, int soluong, int thanhtien)

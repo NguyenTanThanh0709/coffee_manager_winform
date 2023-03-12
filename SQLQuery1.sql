@@ -11,19 +11,13 @@ create table nhanvien(
 	ten_nv nvarchar(100),
 	gioitinh bit,
 	chucvu nvarchar(50),
-	ngayvaolam date,
 	diachi nvarchar(100),
 	phanquyen bit,
-	trangthai bit,
-	matkhau varchar(100),
+	ngayvaolam date,
+	password varchar(100)
 )
 
 
-create table loaikhachhang(
-	ma_loaikh varchar(100) primary key,
-	ten_loaikh nvarchar(100),
-	giamgia int
-)
 
 
 create table khachhang(
@@ -31,8 +25,6 @@ create table khachhang(
 	ten_kh nvarchar(100),
 	diemtl int,
 	password varchar(50),
-	ma_loaikh varchar(100),
-	FOREIGN KEY (ma_loaikh) REFERENCES loaikhachhang(ma_loaikh)
 )
 
 create table khuvuc (
@@ -45,7 +37,7 @@ create table ban(
 	maban varchar(100) primary key,
 	tenban nvarchar(100),
 	makhuvuc varchar(100),
-	thuoctinh varchar(100),
+	trangthai varchar(100),
 	FOREIGN KEY (makhuvuc) REFERENCES khuvuc(makhuvuc)
 )
 
@@ -76,8 +68,8 @@ create table hanghoa(
 create table  calamviec(
 	ma_clv varchar(50) primary key,
 	ten_clv nvarchar(100),
-	gio_BD time,
-	gio_kt time,
+	gio_BD int,
+	gio_kt int,
 	sotien int
 )
 
@@ -86,20 +78,21 @@ create table hoadonbanhang(
 	sdt_nv varchar(50),
 	sdt_kh varchar(50),
 	maban varchar(100),
-	ngay_hd_bh date,
+	ngay_hd_bh_check_in date,
 	tongtien int,
 	diemtl int,
 	giagiam int,
-	chiphikhac int,
-	trangthai nvarchar(100),
+	trangthai bit,
 	FOREIGN KEY (sdt_nv) REFERENCES nhanvien(sdt),
+	FOREIGN KEY (maban) REFERENCES ban(maban),
 	FOREIGN KEY (sdt_kh) REFERENCES khachhang(sdt)
 )
 
 create table chitietbanhang(
 	ma_hd_bh varchar(50),
 	ma_hanghoa varchar(100),
-	soluong int,
+	soluong int default 0,
+	thanhtien int default 0,
 	primary key(ma_hd_bh,ma_hanghoa),
 	FOREIGN KEY (ma_hd_bh) REFERENCES hoadonbanhang(ma_hd_bh),
 	FOREIGN KEY (ma_hanghoa) REFERENCES hanghoa(ma_hanghoa)
@@ -110,7 +103,6 @@ create table chitietluongnhanvien (
 	sdt_nv varchar(50),
 	tongcalamtrongthang int,
 	thanhtien int,
-	kyluong nvarchar(100),
 	primary key (ma_clv, sdt_nv),
 	FOREIGN KEY (ma_clv) REFERENCES calamviec(ma_clv),
 	FOREIGN KEY (sdt_nv) REFERENCES nhanvien(sdt)
@@ -196,9 +188,6 @@ go
 
 
 
-select * from khachhang
 
 
-exec insert_khachhang @p_sdt = '333', 
-@p_ten_kh = '123', @p_diemtl= 2,
-@p_password = '212', @p_ma_loaikh='1'
+

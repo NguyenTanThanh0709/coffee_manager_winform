@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,6 +30,17 @@ namespace DTO
             this.Sdt_ncc = sdt_ncc;
             this.Gia = gia;
             this.Soluong = soluong;
+        }
+
+        public Hanghoa(DataRow row)
+        {
+            this.Ma_hanghoa = row["ma_hanghoa"].ToString();
+            this.Ten_hanghoa = row["ten_hanghoa"].ToString();
+            this.Ma_loaihang = row["ma_loaihoang"].ToString();
+            this.Hinhanh = row["hinh_anh"].ToString();
+            this.Sdt_ncc = row["sdt_ncc"].ToString();
+            this.Gia = (int)row["giasp"];
+            this.Soluong = (int)row["soluong"];
         }
 
         public string Ma_hanghoa { get => ma_hanghoa; set => ma_hanghoa = value; }

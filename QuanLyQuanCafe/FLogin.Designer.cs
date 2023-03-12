@@ -49,6 +49,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tb_sdt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.btn_exit = new System.Windows.Forms.Button();
             this.pnl_logo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnl_login.SuspendLayout();
@@ -103,6 +104,7 @@
             // 
             this.pnl_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.pnl_login.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnl_login.Controls.Add(this.btn_exit);
             this.pnl_login.Controls.Add(this.linklb_register);
             this.pnl_login.Controls.Add(this.btn_login);
             this.pnl_login.Controls.Add(this.panel3);
@@ -118,7 +120,7 @@
             // linklb_register
             // 
             this.linklb_register.AutoSize = true;
-            this.linklb_register.Location = new System.Drawing.Point(330, 451);
+            this.linklb_register.Location = new System.Drawing.Point(330, 457);
             this.linklb_register.Name = "linklb_register";
             this.linklb_register.Size = new System.Drawing.Size(166, 25);
             this.linklb_register.TabIndex = 7;
@@ -132,7 +134,7 @@
             this.btn_login.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_login.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_login.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_login.Location = new System.Drawing.Point(313, 374);
+            this.btn_login.Location = new System.Drawing.Point(192, 374);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(189, 57);
             this.btn_login.TabIndex = 6;
@@ -284,16 +286,32 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Phone number";
             // 
-            // Login
+            // btn_exit
             // 
+            this.btn_exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btn_exit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_exit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_exit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_exit.Location = new System.Drawing.Point(457, 374);
+            this.btn_exit.Name = "btn_exit";
+            this.btn_exit.Size = new System.Drawing.Size(189, 57);
+            this.btn_exit.TabIndex = 8;
+            this.btn_exit.Text = "Exit";
+            this.btn_exit.UseVisualStyleBackColor = false;
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
+            // 
+            // FLogin
+            // 
+            this.AcceptButton = this.btn_login;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btn_exit;
             this.ClientSize = new System.Drawing.Size(1245, 680);
             this.Controls.Add(this.pnl_login);
             this.Controls.Add(this.pnl_logo);
             this.Controls.Add(this.pnl_header);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Name = "Login";
+            this.Name = "FLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.pnl_logo.ResumeLayout(false);
@@ -334,5 +352,6 @@
         private Button btn_login;
         private LinkLabel linklb_register;
         private PictureBox pictureBox4;
+        private Button btn_exit;
     }
 }

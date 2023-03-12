@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,15 @@ namespace DTO
 
         public Hoadonnhaphang()
         {
+        }
+
+        public Hoadonnhaphang(DataRow row)
+        {
+            this.ma_hd_nh = row["ma_hd_nh "].ToString();
+            this.Sdt_nv = row["sdt_nv"].ToString();
+            this.sdt_ncc = row["sdt_ncc"].ToString();
+            this.ngay_nh = (DateTime)row["ngayhdnh"];
+            this.thanhtien = (int)row["thanhtien"];
         }
 
         public Hoadonnhaphang(string ma_hd_nh, string sdt_nv, string sdt_ncc, DateTime ngay_nh, int thanhtien)
