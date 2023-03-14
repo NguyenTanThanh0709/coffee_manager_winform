@@ -55,6 +55,20 @@ namespace DAO
             return false;
         }
 
+        public List<Hanghoa> getAllProdcuts()
+        {
+            String query = "select * from hanghoa";
+            List<Hanghoa> listProducts = null;
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                Hanghoa hh = new Hanghoa(item);
+                listProducts.Add(hh);
+            }
+
+            return listProducts;
+        }
+
         public Khachhang ecuxeProcedure_getKHACHHANG(String sdt, String pass)
         {
             String query = "usp_Login_KHACHHANG @sdt , @pass";

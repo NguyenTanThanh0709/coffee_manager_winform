@@ -25,7 +25,7 @@ namespace BUS
 
         }
 
-        private KhachHangBUS()
+        public KhachHangBUS()
         {
 
         }

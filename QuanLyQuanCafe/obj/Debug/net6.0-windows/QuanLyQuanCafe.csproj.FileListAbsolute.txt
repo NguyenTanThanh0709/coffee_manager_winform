@@ -40,3 +40,4 @@ E:\Documents\OneDrive - student.tdtu.edu.vn\Desktop\CNPM_TH\coffee_manager_winfo
 E:\Documents\OneDrive - student.tdtu.edu.vn\Desktop\CNPM_TH\coffee_manager_winform\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.FLogin.resources
 E:\Documents\OneDrive - student.tdtu.edu.vn\Desktop\CNPM_TH\coffee_manager_winform\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.FRegister.resources
 E:\Documents\OneDrive - student.tdtu.edu.vn\Desktop\CNPM_TH\coffee_manager_winform\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.FHome_User.resources
+E:\Documents\OneDrive - student.tdtu.edu.vn\Desktop\CNPM_TH\coffee_manager_winform\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.FHomeMenu.resources

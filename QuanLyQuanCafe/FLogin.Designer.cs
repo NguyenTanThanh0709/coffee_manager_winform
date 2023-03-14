@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnl_login = new System.Windows.Forms.Panel();
+            this.btn_exit = new System.Windows.Forms.Button();
             this.linklb_register = new System.Windows.Forms.LinkLabel();
             this.btn_login = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -49,7 +50,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tb_sdt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btn_exit = new System.Windows.Forms.Button();
             this.pnl_logo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnl_login.SuspendLayout();
@@ -82,20 +82,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Gold;
-            this.label1.Location = new System.Drawing.Point(102, 62);
+            this.label1.Location = new System.Drawing.Point(21, 58);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(207, 54);
+            this.label1.Size = new System.Drawing.Size(377, 48);
             this.label1.TabIndex = 1;
-            this.label1.Text = "ÔNG BẦU";
+            this.label1.Text = "Chuỗi Café ÔNG BẦU";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(3, 176);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(408, 340);
+            this.pictureBox1.Size = new System.Drawing.Size(405, 340);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -116,6 +116,20 @@
             this.pnl_login.Name = "pnl_login";
             this.pnl_login.Size = new System.Drawing.Size(831, 619);
             this.pnl_login.TabIndex = 2;
+            // 
+            // btn_exit
+            // 
+            this.btn_exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btn_exit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_exit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_exit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_exit.Location = new System.Drawing.Point(457, 374);
+            this.btn_exit.Name = "btn_exit";
+            this.btn_exit.Size = new System.Drawing.Size(189, 57);
+            this.btn_exit.TabIndex = 8;
+            this.btn_exit.Text = "Exit";
+            this.btn_exit.UseVisualStyleBackColor = false;
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
             // linklb_register
             // 
@@ -285,20 +299,6 @@
             this.label3.Size = new System.Drawing.Size(156, 30);
             this.label3.TabIndex = 0;
             this.label3.Text = "Phone number";
-            // 
-            // btn_exit
-            // 
-            this.btn_exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btn_exit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_exit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_exit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_exit.Location = new System.Drawing.Point(457, 374);
-            this.btn_exit.Name = "btn_exit";
-            this.btn_exit.Size = new System.Drawing.Size(189, 57);
-            this.btn_exit.TabIndex = 8;
-            this.btn_exit.Text = "Exit";
-            this.btn_exit.UseVisualStyleBackColor = false;
-            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
             // FLogin
             // 
